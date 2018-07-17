@@ -1,0 +1,23 @@
+{
+  "name": "3cplusv2-sdk-js",
+  "version": "0.0.0",
+  "description": "The 3cplus V2 js sdk",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint lib"
+  },
+  "author": "Mauri de Souza Nunes <mauri.nunes@fluxoti.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.1.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0"
+  }
+}
