@@ -11,7 +11,7 @@ yarn add 'git+ssh://git@github.com/fluxoti/3cplusv2-sdk-js#master' --save
 ## Usage
 
 ```js
-const TcSDK = require('3cplusv2-sdk-js')
+import TcSDK from '3cplusv2-sdk-js'
 
 // The constructor receives the same options as the axios.create
 const client = new TcSDK({
