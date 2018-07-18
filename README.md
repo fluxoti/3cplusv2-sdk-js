@@ -5,16 +5,16 @@ A SDK used internally to contact the api and socket of the 3cplusv2 exposing a c
 ## Installation
 
 ```bash
-yarn add 'git+ssh://git@gitlab.fluxoti.com/3cplus/sdk-js#master' --save
+yarn add 'git+ssh://git@github.com/fluxoti/3cplusv2-sdk-js#master' --save
 ```
 
 ## Usage
 
 ```js
-const TcApi = require('./lib')
+const TcSDK = require('3cplusv2-sdk-js')
 
 // The constructor receives the same options as the axios.create
-const client = new TcApi({
+const client = new TcSDK({
   baseURL: "https://app.3c.fluxoti.com"
 })
 .v1()
@@ -27,3 +27,7 @@ client.user().me().then(function (response) {
   console.log(err.response.data)
 })
 ```
+
+All available api endpoints are under `.vX()`, separated by sections. Each method return an axios promise.
+
+Please refer to the [Api Documentation](http://api-docs.3c.fluxoti.com) for more info about the conventions of the request parameters, responses and errors.
