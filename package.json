@@ -1,6 +1,6 @@
 {
   "name": "3cplusv2-sdk-js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "The 3cplus V2 js sdk",
   "main": "lib/index.js",
   "scripts": {
@@ -10,7 +10,8 @@
   "author": "Mauri de Souza Nunes <mauri.nunes@fluxoti.com>",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.18.0"
+    "axios": "^0.18.0",
+    "socket.io-client": "^2.1.1"
   },
   "devDependencies": {
     "eslint": "^5.1.0",
