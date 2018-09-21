@@ -1,6 +1,6 @@
 {
   "name": "3cplusv2-sdk-js",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "The 3cplus V2 js sdk",
   "main": "lib/index.js",
   "scripts": {
