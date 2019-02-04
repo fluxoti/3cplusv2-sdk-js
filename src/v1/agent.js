@@ -24,15 +24,15 @@ class AgentEndpoints {
   login (data) {
     return this.client.post('/agent/login', data)
   }
-  
+
   /**
    * Login an agent into manual mode.
    * @param {object} data
    * @returns {Promise}
    */
   loginManual (data) {
-    const defaultData = { mode: 'manual' };
-    return this.login({ ...data, ...defaultData });
+    const defaultData = { mode: 'manual' }
+    return this.login({ ...data, ...defaultData })
   }
 
   /**
