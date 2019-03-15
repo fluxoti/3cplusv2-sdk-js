@@ -36,6 +36,15 @@ class AgentEndpoints {
   }
 
   /**
+   * Login an agent in order to use the webphone feature.
+   * @param {object} data
+   * @returns {Promise}
+   */
+  loginWebphone (data) {
+    return this.client.post('/agent/webphone/login', data)
+  }
+
+  /**
    * Logout an agent.
    * @returns {Promise}
    */
