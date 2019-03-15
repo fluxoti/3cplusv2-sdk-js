@@ -17,6 +17,15 @@ class CallEndpoints {
   }
 
   /**
+   * Retrieve a call from the history by it's id.
+   * @param {string} The call id
+   * @returns {Promise}
+   */
+  historyByID (id) {
+    return this.client.get(`/calls/${id}`)
+  }
+
+  /**
    * Download a recorded call.
    * @param {integer} year
    * @param {integer} month
