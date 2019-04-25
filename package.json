@@ -1,6 +1,6 @@
 {
   "name": "3cplusv2-sdk-js",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "The 3cplus V2 js sdk",
   "main": "lib/3cplusv2-sdk-js.js",
   "scripts": {
@@ -12,8 +12,8 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
-    "jssip": "^3.2.12",
-    "socket.io-client": "^2.1.1"
+    "jssip": "^3.3.6",
+    "socket.io-client": "^2.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.51",
