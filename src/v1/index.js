@@ -1,6 +1,7 @@
 const socketio = require('socket.io-client')
 const AgentEndpoints = require('./agent')
 const UserEndpoints = require('./user')
+const WorkBreakEndpoints = require('./work-breaks')
 const CallEndpoints = require('./call')
 const RealtimeEvents = require('./realtime')
 
@@ -66,6 +67,14 @@ class V1 {
    */
   call () {
     return new CallEndpoints(this.client)
+  }
+
+  /**
+   * Work break endpoints.
+   * @returns {WorkBreakEndpoints}
+   */
+  workBreaks () {
+    return new WorkBreakEndpoints(this.client)
   }
 
   /**
