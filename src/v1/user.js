@@ -22,6 +22,14 @@ class UserEndpoints {
   authenticate (data) {
     return this.client.post('/authenticate', data)
   }
+
+  /**
+   * Authenticate a user in webphone mode.
+   * @returns {Promise}
+   */
+  webphoneAuthenticate (data) {
+    return this.client.post('/webphone-authenticate', data)
+  }
 }
 
 module.exports = UserEndpoints
