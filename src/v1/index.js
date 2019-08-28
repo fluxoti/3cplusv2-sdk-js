@@ -32,7 +32,7 @@ class V1 {
    * @returns {V1}
    */
   socket (url, extension = false) {
-    this.socketio = socketio(url, { transports: ['websocket'], query: { token: this.token, extension } })
+    this.socketio = socketio(url, { transports: ['websocket'], query: { token: this.token, extension }, forceNew: true })
     return this
   }
 
