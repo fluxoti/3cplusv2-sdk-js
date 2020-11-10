@@ -4,6 +4,8 @@ const UserEndpoints = require('./user')
 const WorkBreakEndpoints = require('./work-breaks')
 const CallEndpoints = require('./call')
 const RealtimeEvents = require('./realtime')
+const IntegrationEvents = require('./integration')
+const WebSocket = require('isomorphic-ws')
 
 class V1 {
   /**
@@ -33,6 +35,17 @@ class V1 {
    */
   socket (url, extension = false) {
     this.socketio = socketio(url, { transports: ['websocket'], query: { token: this.token, extension }, forceNew: true })
+    return this
+  }
+
+  /**
+   * Websocket connection.
+   * @param {string} url Event server url.
+   * @returns {V1}
+   */
+  websocket (url) {
+    this.ws = new WebSocket(`${url}?token=${this.token}`)
+
     return this
   }
 
@@ -83,6 +96,14 @@ class V1 {
    */
   realtime () {
     return new RealtimeEvents(this.socketio)
+  }
+
+  /**
+   * Integration events.
+   * @returns {}
+   */
+  events () {
+    return new IntegrationEvents(this.ws)
   }
 }
 
