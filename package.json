@@ -6,7 +6,9 @@
   "scripts": {
     "build": "webpack --env dev && webpack --env build",
     "dev": "webpack --progress --colors --watch --env dev",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "clean": "rm -r lib",
+    "publish": "yarn run clean && yarn run build && npm publish"
   },
   "author": "Mauri de Souza Nunes <mauri.nunes@fluxoti.com>",
   "license": "MIT",
