@@ -19,14 +19,24 @@ const sdk = new TcSDK({
 })
 .v1()
 .withAuth('your_api_token_here')
-.socket('https://socket.3c.fluxoti.com')
 
 # Http Api
 sdk.user().me()
 .then((response) => console.log(response.data))
 .catch((err) => console.log(err.response.data))
 
-# Realtime integration
+# Realtime integration events
+sdk = sdk.websocket('wss://events.3c.fluxoti.com/ws/me')
+const events = sdk.events()
+
+events.on('open', () => console.log('Connected'))
+events.on('close', () => console.log('Connection closed'))
+events.on('error', err => console.log(err))
+events.on('message', evt => console.log(evt))
+events.on('event-name-here', evt => console.log(evt))
+
+# Realtime events (legacy)
+sdk = sdk.socket('https://socket.3c.fluxoti.com')
 const socket = sdk.realtime().integration()
 
 socket.on('connect', (event) => console.log('Listening for events'))
